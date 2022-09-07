@@ -80,11 +80,11 @@ jobs:
         echo $PATH
         #sudo snap remove docker
         #sudo apt-get install docker
-        echo "Second Path details"
-        echo $PATH
+        echo "Second Path details"      
         echo "::pwd"
-        docker build .
-        docker build contextdir
+        docker info
+        #docker build .
+        #docker build contextdir
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         
