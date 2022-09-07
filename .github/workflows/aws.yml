@@ -78,8 +78,8 @@ jobs:
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
         docker --version
         echo $PATH
-        snap remove docker
-        apt-get install docker
+        sudo snap remove docker
+        sudo apt-get install docker
         echo "Second Path details"
         echo $PATH
         docker build contextdir
